@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Fraunces;
+    src: url("/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf") format("truetype");
+  }
+
+@font-face {
+    font-family: Inter;
+    src: url("/Inter-VariableFont_opsz,wght.ttf") format("truetype");
+  }
+
+  @theme {
+    --color-1: #351F11;
+    --color-2: #D8D3CB;
+    --color-3: #9F7A63;
+    --color-4: #400001;
+  
+    --font-fraunces: "Fraunces", serif;
+    --font-inter: "Inter", sans-serif;
+    
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 20s linear infinite;
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-50% - 1rem));
+    }
+  }
+  @keyframes marquee-reverse {
+    100% {
+      transform: translateX(0);
+    }
+    0% {
+      transform: translateX(calc(-50% - 1rem));
+    }
+  }
+  }  
+
+  ::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #351F11; }
+::-webkit-scrollbar-thumb { background: #D8D3CB; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #D8D3CB; }
+::selection{
+  background-color: var(--color-1);
+  color: var(--color-2);
+}
